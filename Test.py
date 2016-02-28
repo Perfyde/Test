@@ -1,6 +1,7 @@
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageDraw
 
-im = Image.open("poisson.jpg")
+im = Image.open("ban.jpg")
+draw = ImageDraw.Draw(im)
 
 (width, height) = im.size
 for x in range(width):
@@ -8,12 +9,12 @@ for x in range(width):
         print "Processing pixel (%d %d)" % (x, y)
         (r, g, b) = im.getpixel((x, y))
         if 150 <= r <= 255 and 0 <= g <= 40 and 0 <= b <= 70:
-            im.putpixel((x, y), (255, 0, 0))
-        else:
-            im.putpixel((x, y), (255, 255, 255))
+            Draw.ellipse((5, 5), [5, 5], fill=None, outline=None)
+            #draw.point((x, y), fill=(255, 255, 255))
 
-im = im.filter(ImageFilter.GaussianBlur(8))
 
-# write to stdout
-im.save("poisson1.jpg")
+#im = im.filter(ImageFilter.GaussianBlur(8))
+
+
+im.save("ban1.jpg")
 
