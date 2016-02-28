@@ -9,9 +9,12 @@ for x in range(width):
         print "Processing pixel (%d %d)" % (x, y)
         (r, g, b) = im.getpixel((x, y))
         if 150 <= r <= 255 and 0 <= g <= 40 and 0 <= b <= 70:
-            ImageDraw.Draw.ellipse((5, 5), [5, 5], fill=None, outline=None)
-            #draw.point((x, y), fill=(255, 255, 255))
 
+            draw.point((x, y), fill=(255, 0, 0))
+        else:
+            draw.point((x, y), fill=(255, 255, 255))
+
+draw.ellipse([(15, 15), (-15, -15)], (255, 0, 0))
 
 #im = im.filter(ImageFilter.GaussianBlur(8))
 
