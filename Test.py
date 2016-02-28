@@ -9,7 +9,7 @@ for x in range(width):
         print "Processing pixel (%d %d)" % (x, y)
         (r, g, b) = im.getpixel((x, y))
         if 150 <= r <= 255 and 0 <= g <= 40 and 0 <= b <= 70:
-            Draw.ellipse((5, 5), [5, 5], fill=None, outline=None)
+            ImageDraw.Draw.ellipse((5, 5), [5, 5], fill=None, outline=None)
             #draw.point((x, y), fill=(255, 255, 255))
 
 
