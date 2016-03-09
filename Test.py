@@ -15,7 +15,7 @@ for x in range(width):
 
 draw.ellipse([(10, 10), (15, 15)], (255, 0, 0))
 
-im = im.filter(ImageFilter.GaussianBlur(3))
+#im = im.filter(ImageFilter.GaussianBlur(3))
 
 
 im.save("ban1.jpg")
